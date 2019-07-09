@@ -12,21 +12,29 @@ public class CameraScript : MonoBehaviour
     public float axisX;
     public float axisY;
 
+    
+    public Player _player;
+
+    public Quaternion _cameraStart;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _cameraStart = this.transform.rotation;
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (isLooking) {
-            Look();
+            LookMode();
         }
+
+
     }
 
-    public void Look() {
+    public void LookMode() {
         axisX += speedX * Input.GetAxis("Mouse X");
         axisY -= speedY * Input.GetAxis("Mouse Y");
 
@@ -34,5 +42,20 @@ public class CameraScript : MonoBehaviour
         axisY = Mathf.Clamp(axisY, -90f, 90f);
 
         transform.eulerAngles = new Vector3(axisY, axisX, 0.0f);
+    }
+
+    public void Look() {
+        if (!isLooking)
+        {
+            _player.isMove = false;
+            isLooking = true;
+
+        }
+        else
+        {
+            this.transform.rotation = _cameraStart;
+            isLooking = false;
+            _player.isMove = true;
+        }
     }
 }

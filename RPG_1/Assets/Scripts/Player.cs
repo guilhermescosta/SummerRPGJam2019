@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
 
     public Animator _anim;
+
+    public bool isMove;
     // Start is called before the first frame update
 
   
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
         mp = 1;
 
         attackMode = false;
+        isMove = true;
 
 
     }
@@ -47,22 +50,7 @@ public class Player : MonoBehaviour
     {
        
 
-        if (Input.GetKey(KeyCode.W)) {
-            transform.Translate(0, 0, 0.05f);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -0.02f);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0, -1, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, 1, 0);
-        }
+        
 
         if (attackMode)
         {
@@ -73,6 +61,29 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    public void Move() {
+       
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(0, 0, 0.05f);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(0, 0, -0.02f);
+        }
+
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(0, -1, 0);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(0, 1, 0);
+        }
+    }
+
     public void AttackBtn() {
         if (!attackMode)
             attackMode = true;
