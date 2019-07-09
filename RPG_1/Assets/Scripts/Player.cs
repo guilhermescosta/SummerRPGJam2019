@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     public int xp;
 
+    public bool attackMode;
+
 
     public Animator _anim;
     // Start is called before the first frame update
@@ -34,7 +36,10 @@ public class Player : MonoBehaviour
         intelligence = 1;
         hp = 10;
         mp = 1;
-        
+
+        attackMode = false;
+
+
     }
 
     // Update is called once per frame
@@ -59,11 +64,20 @@ public class Player : MonoBehaviour
             transform.Rotate(0, 1, 0);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (attackMode)
         {
-            Attack();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+            }
         }
 
+    }
+    public void AttackBtn() {
+        if (!attackMode)
+            attackMode = true;
+        else
+            attackMode = false;
     }
 
     public void Attack() {
