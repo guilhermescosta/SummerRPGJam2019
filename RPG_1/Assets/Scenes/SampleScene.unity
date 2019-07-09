@@ -664,13 +664,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  xp: 0
+  nextLv: 0
   playerName: 
   strength: 0
   dexterity: 0
   intelligence: 0
   hp: 0
+  currentHp: 0
+  _hpBar: {fileID: 427726217}
   mp: 0
-  xp: 0
+  currentMp: 0
   attackMode: 0
   _anim: {fileID: 209213704}
   isMove: 0

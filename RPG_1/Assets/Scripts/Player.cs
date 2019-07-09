@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public int level;
+    public int xp;
+    public int nextLv;
+
     public string playerName;
 
     [Range(0,100)]
@@ -14,12 +18,13 @@ public class Player : MonoBehaviour
     [Range(0, 100)]
     public int intelligence;
     
-
     public int hp;
+    public int currentHp;
+    public Image _hpBar;
+
     public int mp;
-
-    public int xp;
-
+    public int currentMp;
+    
     public bool attackMode;
 
 
@@ -37,6 +42,7 @@ public class Player : MonoBehaviour
         dexterity = 5;
         intelligence = 1;
         hp = 10;
+        currentHp = hp;
         mp = 1;
 
         attackMode = false;
@@ -48,9 +54,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-        
+
+        HpBar();
 
         if (attackMode)
         {
@@ -93,5 +99,8 @@ public class Player : MonoBehaviour
 
     public void Attack() {
         _anim.SetTrigger("Attack_Move");
+    }
+    public void HpBar() {
+        _hpBar.fillAmount = (float) currentHp / (float) hp;     // casting de int para float
     }
 }
