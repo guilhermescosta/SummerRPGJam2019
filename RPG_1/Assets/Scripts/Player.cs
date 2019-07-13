@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     public Animator _anim;
 
     public bool isMove;
+
+
     // Start is called before the first frame update
 
   
@@ -64,6 +66,10 @@ public class Player : MonoBehaviour
             {
                 Attack();
             }
+        }
+
+        if (isMove) {
+            Move();
         }
 
     }
@@ -103,4 +109,8 @@ public class Player : MonoBehaviour
     public void HpBar() {
         _hpBar.fillAmount = (float) currentHp / (float) hp;     // casting de int para float
     }
+
+
+   
+
 }
