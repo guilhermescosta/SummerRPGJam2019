@@ -65,9 +65,11 @@
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Take.cs" />
+    <Compile Include="Assets\Slot.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/guilh/Documents/GitHub/SummerRPGJam2019/RPG_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
