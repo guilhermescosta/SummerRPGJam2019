@@ -1273,6 +1273,25 @@ MonoBehaviour:
   _inventoryUI: {fileID: 0}
   space: 10
   items: []
+--- !u!1 &418053297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8543277501164456617, guid: f83995e2e99ff92439a18c479c1e63f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7241532884622950312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &418053303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418053297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 50, z: 8}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &427726215
 GameObject:
   m_ObjectHideFlags: 0

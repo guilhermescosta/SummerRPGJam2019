@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interact : MonoBehaviour
+public class Take : MonoBehaviour
 {
     public Item item;
     public bool isOver;
@@ -21,8 +21,6 @@ public class Interact : MonoBehaviour
                 // Debug.Log(gameObject.name);
                 isOver = true;
             }
-
-           
         }
     }
 
@@ -40,11 +38,7 @@ public class Interact : MonoBehaviour
             
             Destroy(gameObject);
 
-        }
-
-        if (interactable == false) {
-            isOver = false;
-        }
+        }   
     }
 
    

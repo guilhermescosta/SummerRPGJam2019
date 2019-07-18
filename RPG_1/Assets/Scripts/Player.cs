@@ -85,6 +85,15 @@ public class Player : MonoBehaviour
             transform.Translate(0, 0, -0.02f);
         }
 
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Translate(-0.05f, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Translate(0.05f, 0, 0);
+        }
+
 
         if (Input.GetKey(KeyCode.A))
         {
