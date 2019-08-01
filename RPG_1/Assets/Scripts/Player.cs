@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
         _hpBar.fillAmount = (float) currentHp / (float) hp;     // casting de int para float
     }
 
-
+ 
    
 
 }

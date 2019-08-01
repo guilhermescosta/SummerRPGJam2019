@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Take.cs" />
+     <Compile Include="Assets\Scripts\WeaponScript.cs" />
      <Compile Include="Assets\Slot.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/VictorS2Thai/Documents/GitHub/SummerRPGJam2019/RPG_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
