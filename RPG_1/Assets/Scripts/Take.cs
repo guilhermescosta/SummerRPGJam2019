@@ -51,7 +51,7 @@ public class Interact : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
         if (other.CompareTag("Player")) {
             interactable = true;
         }
