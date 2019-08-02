@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public Transform Player;
     public float stoppingDistance;
 
-    public int Health = 30;
+    public int Health = 50;
 
     // Start is called before the first frame update
     void Start()
