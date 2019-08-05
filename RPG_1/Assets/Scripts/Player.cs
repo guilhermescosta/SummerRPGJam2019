@@ -103,6 +103,11 @@ public class Player : MonoBehaviour
         {
             transform.Rotate(0, 1, 0);
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.Translate(0, 0, 0.08f);
+        }
     }
 
     public void AttackBtn() {
