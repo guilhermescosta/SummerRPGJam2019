@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,18 +10,34 @@ public class Enemy : MonoBehaviour
     public Transform Player;
     public float stoppingDistance;
 
-    public float Health = 50;
+    public float Health = 100;
+    public float MaxHealth;
+
+    public GameObject healthBar;
+    public Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
+        Health = MaxHealth;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        slider.value = CalculateHealth();
         transform.LookAt(Player);
+
+        if(Health < MaxHealth)
+        {
+            healthBar.SetActive(true);
+        }
+
+        if(Health > MaxHealth)
+        {
+            Health = MaxHealth;
+        }
 
         if (Vector3.Distance(transform.position, Player.position) > stoppingDistance)
         {
@@ -28,7 +45,10 @@ public class Enemy : MonoBehaviour
         }
 
        
-
+        float CalculateHealth()
+        {
+            return Health / MaxHealth;
+        }
     }
 
 
