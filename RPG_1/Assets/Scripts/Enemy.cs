@@ -6,12 +6,18 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public float speed;
+    public int level = 1;
+    public int baseXp;
+    public int attack;
+
+    
 
     public Transform Player;
     public float stoppingDistance;
 
     public float Health = 100;
     public float MaxHealth;
+    
 
     public GameObject healthBar;
     public Slider slider;
@@ -20,6 +26,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         Health = MaxHealth;
+        Health *= level;
+        attack *= level;
+        baseXp *= level;
         
     }
 
