@@ -10,10 +10,13 @@ public class Enemy : MonoBehaviour
     public int baseXp;
     public int attack;
 
-    
 
+    public float distanceToFollow;
     public Transform Player;
+    private Player player;
     public float stoppingDistance;
+    private float currentDistancePlayer;
+    private Vector3 playerposition;
 
     public float Health = 100;
     public float MaxHealth;
@@ -25,6 +28,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType(typeof(Player)) as Player;
         Health = MaxHealth;
         Health *= level;
         attack *= level;
@@ -37,6 +41,14 @@ public class Enemy : MonoBehaviour
     {
         slider.value = CalculateHealth();
         transform.LookAt(Player);
+        playerposition = player.transform.position;
+
+        currentDistancePlayer = Vector3.Distance(transform.position, playerposition);
+
+        if(currentDistancePlayer < distanceToFollow)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+        }
 
         if(Health < MaxHealth)
         {
@@ -48,10 +60,10 @@ public class Enemy : MonoBehaviour
             Health = MaxHealth;
         }
 
-        if (Vector3.Distance(transform.position, Player.position) > stoppingDistance)
+        /*if (Vector3.Distance(transform.position, Player.position) > stoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-        }
+        }*/
 
        
         float CalculateHealth()
