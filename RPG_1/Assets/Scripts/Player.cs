@@ -21,6 +21,12 @@ public class Player : MonoBehaviour
     public int hp;
     public int currentHp;
     public Image _hpBar;
+    public Slider _staminaSlider;
+    public int maxStamina;
+    public int staminaFallRate;
+    public int staminaFallMult;
+    private int staminaRegainRate;
+    public int staminaRegainMult;
 
     public int mp;
     public int currentMp;
@@ -53,6 +59,15 @@ public class Player : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        _staminaSlider.maxValue = maxStamina;
+        _staminaSlider.value = maxStamina;
+
+        staminaFallRate = 1;
+        staminaRegainRate = 1;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -71,6 +86,26 @@ public class Player : MonoBehaviour
         if (isMove) {
             Move();
         }
+
+        if (Input.GetKey(KeyCode.LeftShift) && (_staminaSlider.value > 0))
+        {
+            transform.Translate(0, 0, 0.07f);
+            _staminaSlider.value -= Time.deltaTime / staminaFallRate * staminaFallMult;
+        }
+        else
+        {
+            _staminaSlider.value += Time.deltaTime / staminaRegainRate * staminaRegainRate;
+        }
+
+        if(_staminaSlider.value >= maxStamina)
+        {
+            _staminaSlider.value = maxStamina;
+        }
+
+        /*else if (_staminaSlider.value <= 0)
+        {
+            _staminaSlider.value = 0;
+        }*/
 
     }
 
@@ -104,10 +139,7 @@ public class Player : MonoBehaviour
             transform.Rotate(0, 1, 0);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.Translate(0, 0, 0.08f);
-        }
+        
     }
 
     public void AttackBtn() {
