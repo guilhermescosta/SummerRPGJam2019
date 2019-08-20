@@ -8,10 +8,14 @@ public class GateScript : MonoBehaviour
     public bool gateOpen;
     public float timer;
     public Animator anim;
+    
+
+
 
     void Start ()
     {
         anim = GetComponent<Animator>();
+        
     }
     
     void OnTriggerStay (Collider col)
@@ -20,6 +24,7 @@ public class GateScript : MonoBehaviour
         {
             gateOpen = true;
             Gate.transform.Translate(Vector3.up * Time.deltaTime * 3);
+           
 
             Debug.Log("Door Open");
             

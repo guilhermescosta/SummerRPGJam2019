@@ -6553,6 +6553,61 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3196445
       objectReference: {fileID: 0}
+    - target: {fileID: 2373117670376065230, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d75251c0104467a42880b64e3c1abd29, type: 2}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17100202
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3916145
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.010776401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879815789589147895, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299229787772929955, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_Name
+      value: LeverHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001134304358833303, guid: 50bafd66aa50c6d448f2a951ecef1984,
+        type: 3}
+      propertyPath: m_Name
+      value: Base
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bafd66aa50c6d448f2a951ecef1984, type: 3}
 --- !u!1 &1278523463 stripped
