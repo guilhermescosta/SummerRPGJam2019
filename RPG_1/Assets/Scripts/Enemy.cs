@@ -47,7 +47,11 @@ public class Enemy : MonoBehaviour
 
         if(currentDistancePlayer < distanceToFollow)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, Player.position) > stoppingDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+            }
+              
         }
 
         if(Health < MaxHealth)
